@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TemperatureConvertor</title>
+    <script>
+        function convert() {
+          var temp = parseInt(document.getElementById("input").value);
+  
+          document.getElementById("para").innerHTML = temp + 273.5 + "K";
+  
+          if (temp > 35) {
+            document.getElementById("comment").innerHTML = "Its too Hot Today..";
+          } else {
+            document.getElementById("comment").innerHTML =
+              "The wheather is pretty cool...";
+          }
+        }
+      </script>
+    <style>
+           body{
+            background-color: #C7EBF8  ;
+        }
+        .s1{
+            text-align: center;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-top: 60px;
+            color:#411E62 ;
+            font-size: 110%;
+        }
+        .box {
+        padding: 45px;
+        background-color: whitesmoke;
+        margin-left: 400px;
+        margin-right: 400px;
+        text-align: center;
+        border: 5px solid #583B89 ;
+        border-radius: 40px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: larger;
+      }
+      p {
+        border: 5px solid #34712C ;
+        margin-left: 100px;
+        margin-right: 100px;
+        border-radius: 15px;
+        padding: 2px;
+      }
+      #input {
+        border: 2px solid black;
+      }
+
+      #input {
+        border: 2px solid black;
+      }
+      #button{
+        background-color:#34712C ;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: medium;
+      }
+    </style>
+</head>
+<body>
+    <div class="s1">
+        <h2><b>Temperature convertor</b></h2>
+
+    </div>
+    <hr>
+    <br><br>
+    <br>
+    <div class="box">
+        <label class="s3">Enter Temperature in °C:</label>
+        <input type="number" id="input" />
+        <br>
+        <br>
+        <button id="button" class="btn btn-success" onclick="convert()">
+            Convert
+          </button>
+          <br>
+          <br>
+          <p id="para">Result</p>
+
+      <p id="comment">comment</p>
+
+    </div>
+    
+</body>
+</html>
